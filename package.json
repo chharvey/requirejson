@@ -1,6 +1,6 @@
 {
-  "name": "requirejson",
-  "version": "1.0.0",
+  "name": "@chharvey/requirejson",
+  "version": "1.0.1",
   "description": "Require JSON files with a file extension other than `.json`.",
   "main": "index.js",
   "scripts": {
