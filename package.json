@@ -1,0 +1,24 @@
+{
+  "name": "requirejson",
+  "version": "1.0.0",
+  "description": "Require JSON files with a file extension other than `.json`.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chharvey/requirejson.git"
+  },
+  "keywords": [
+    "node",
+    "require",
+    "json"
+  ],
+  "author": "Chris Harvey <chrisharvey2pi@gmail.com> (https://chharvey.github.io/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chharvey/requirejson/issues"
+  },
+  "homepage": "https://github.com/chharvey/requirejson#readme"
+}
