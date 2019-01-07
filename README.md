@@ -36,7 +36,7 @@ import {
 	JSONPrimitive,
 	JSONSchema,
 	JSONSchemaObject,
-	JSONLDObject
+	JSONLDObject,
 } from '@chharvey/requirejson'
 
 let my_json_object: Promise<JSONValue> = requireJSON('./my-file.jsonld')
@@ -52,7 +52,7 @@ Asynchronously returns a JSON value that is the result of parsing the file conte
 - `filepath`: the path of the file to read, relative to current working directory
 
 #### Returns:
-A JSON value parsed from the file contents.
+A Promise resolving to a JSON value parsed from the file contents.
 
 ### `requireJSONSync(filepath: string): JSONValue`
 Synchronously returns a JSON value that is the result of parsing the file contents.
@@ -66,10 +66,10 @@ A JSON value parsed from the file contents.
 ## Types
 type name | definition | description
 ----------|------------|------------
-JSONValue | `JSONObject or JSONArray or JSONPrimitive` | Any JSON value.
-JSONObject | `{[key: string]: JSONValue or undefined;}` | A general JSON object, with string keys and JSONValue values.
+JSONValue | `JSONObject or JSONArray or JSONPrimitive` | Any valid [JSON](http://json.org/) value.
+JSONObject | `{[key: string]?: JSONValue}` | A general JSON object, with string keys and JSONValue values.
 JSONArray | `JSONValue[]` | A JSON array, with JSONValue entries.
 JSONPrimitive | `string or number or boolean or null` | A JSON primitive.
 JSONSchema | `JSONSchemaObject or boolean` | JSON data that validates against the [JSON-Schema specification](http://json-schema.org/).
-JSONSchemaObject | | A JSON object that is a JSON-Schema.
-JSONLDObject | | A JSON object that validates against the [JSON-LD specification](https://json-ld.org/).
+JSONSchemaObject | `extends JSONObject` | A JSON object that is a JSON-Schema.
+JSONLDObject | `extends JSONObject` | A JSON object that validates against the [JSON-LD specification](https://json-ld.org/).
