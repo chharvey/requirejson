@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/chharvey/requirejson/issues"
   },
-  "homepage": "https://github.com/chharvey/requirejson#readme"
+  "homepage": "https://github.com/chharvey/requirejson#readme",
+  "dependencies": {
+    "@types/json-schema": "^7.0.1"
+  }
 }

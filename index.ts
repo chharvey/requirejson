@@ -18,5 +18,10 @@ export declare function requireJSONSync(filepath: string): JSONValue;
 
 
 export { JSONValue, JSONObject, JSONArray, JSONPrimitive } from './json.d'
-export { JSONSchema, JSONSchemaObject } from './json-schema.d'
 export { JSONLDObject } from './json-ld.d'
+export {
+	JSONSchema,
+	JSONSchemaObject,
+	JSONSchema7Definition,
+	JSONSchema7,
+} from './json-schema.d' // WARNING{DEPRECATED} - you should import from `@types/json-schema` directly

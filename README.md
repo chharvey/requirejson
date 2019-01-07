@@ -34,8 +34,8 @@ import {
 	JSONObject,
 	JSONArray,
 	JSONPrimitive,
-	JSONSchema,
-	JSONSchemaObject,
+	JSONSchema,       // WARNING{DEPRECATED} - use `@types/json-schema` instead
+	JSONSchemaObject, // WARNING{DEPRECATED} - use `@types/json-schema` instead
 	JSONLDObject,
 } from '@chharvey/requirejson'
 
@@ -70,6 +70,6 @@ JSONValue | `JSONObject or JSONArray or JSONPrimitive` | Any valid [JSON](http:/
 JSONObject | `{[key: string]?: JSONValue}` | A general JSON object, with string keys and JSONValue values.
 JSONArray | `JSONValue[]` | A JSON array, with JSONValue entries.
 JSONPrimitive | `string or number or boolean or null` | A JSON primitive.
-JSONSchema | `JSONSchemaObject or boolean` | JSON data that validates against the [JSON-Schema specification](http://json-schema.org/).
-JSONSchemaObject | `extends JSONObject` | A JSON object that is a JSON-Schema.
+JSONSchema (DEPRECATED) | `JSONSchema7Definition` | alias of [`JSONSchema7Definition`](https://www.npmjs.com/package/@types/json-schema) — [JSON-Schema](http://json-schema.org/).
+JSONSchemaObject (DEPRECATED) | `JSONSchema7` | alias of [`JSONSchema7`](https://www.npmjs.com/package/@types/json-schema).
 JSONLDObject | `extends JSONObject` | A JSON object that validates against the [JSON-LD specification](https://json-ld.org/).
