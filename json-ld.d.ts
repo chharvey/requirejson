@@ -1,23 +1,26 @@
-import { JSONValue, JSONObject, JSONArray } from './json.d'
+import { JSONValue, JSONObject, JSONArray, JSONPrimitive } from './json.d'
 
 
 /**
  * A single JSON-LD document.
+ * @see https://github.com/json-ld/json-ld.org/blob/1.0/schemas/jsonld-schema.json
  */
-export interface JSONLDObject extends CommonObject {
-	'@context'?: (ContextObject|string)[]|ContextObject|string|null;
-	'@graph'?: { [key: string]: CommonObject; }|CommonObject[];
-	[key: string]: any/*CommonObject*/;
+export interface JSONLDDocument extends JSONLDObject {
+	'@context'?: Context[]|Context|null;
+	'@graph'?: { [key: string]: JSONLDObject; }|JSONLDObject[];
+	[key: string]: (JSONLDObject|JSONPrimitive)[]|JSONLDObject|JSONPrimitive|undefined;
 }
 
-type ContextObject = {
-	[key: string]: string|{
+type Context = {
+	[key: string]: {
 		'@id': string;
 		'@type': '@id';
-	}
-}
+	}|{
+		'@reverse': string;
+	}|string;
+}|string
 
-interface CommonObject extends JSONObject {
+export interface JSONLDObject extends JSONObject {
 	/**
 	 * @format uri
 	 */
@@ -29,7 +32,7 @@ interface CommonObject extends JSONObject {
 	'@id'?: string;
 	'@language'?: string|null;
 	'@list'?: JSONLDObject[];
-	'@reverse'?: { [key: string]: CommonObject; }|string|null;
+	'@reverse'?: { [key: string]: JSONLDObject; }|string|null;
 	'@set'?: JSONLDObject[];
 	'@type'?: string[]|string|null;
 	'@value'?: string|number|boolean|null;
@@ -37,5 +40,5 @@ interface CommonObject extends JSONObject {
 	 * @format uri
 	 */
 	'@vocab'?: string|null;
-	[key: string]: any/*CommonObject*/;
+	[key: string]: (JSONLDObject|JSONPrimitive)[]|JSONLDObject|JSONPrimitive|undefined;
 }
