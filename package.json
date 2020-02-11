@@ -23,5 +23,8 @@
   "homepage": "https://github.com/chharvey/requirejson#readme",
   "dependencies": {
     "@types/json-schema": "^7.0.2"
+  },
+  "peerDependencies": {
+    "typescript": "~3.7.5"
   }
 }
