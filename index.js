@@ -1,30 +1,29 @@
 const fs   = require('fs')
-const util = require('util')
 
 
-module.exports.requireJSON = async function requireJSON(filepath) {
-	let data = await util.promisify(fs.readFile)(filepath, 'utf8')
+module.exports.requireJSON = async (filepath) => {
+	const data = fs.promises.readFile(filepath, 'utf8')
 	let object;
 	try {
-		object = JSON.parse(data)
-	} catch (e) {
-		e.filename = filepath
-		console.error(e)
-		throw e
+		object = JSON.parse(await data)
+	} catch (err) {
+		err.filename = filepath
+		console.error(err)
+		throw err
 	}
 	return object
 }
 
 
-module.exports.requireJSONSync = function requireJSONSync(filepath) {
-	let data = fs.readFileSync(filepath, 'utf8')
+module.exports.requireJSONSync = (filepath) => {
+	const data = fs.readFileSync(filepath, 'utf8')
 	let object;
 	try {
 		object = JSON.parse(data)
-	} catch (e) {
-		e.filename = filepath
-		console.error(e)
-		throw e
+	} catch (err) {
+		err.filename = filepath
+		console.error(err)
+		throw err
 	}
 	return object
 }
