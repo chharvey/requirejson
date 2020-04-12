@@ -1,4 +1,4 @@
-import { JSONValue, JSONObject, JSONArray, JSONPrimitive } from './json.d'
+import type {JSONObject, JSONPrimitive} from './json.d'
 
 
 /**
