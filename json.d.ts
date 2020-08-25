@@ -1,21 +1,21 @@
 /**
  * Any JSON value.
  */
-export type JSONValue = JSONObject|JSONArray|JSONPrimitive
+export type JSONValue = JSONObject | JSONArray | JSONPrimitive
 
 /**
  * Any JSON object.
  */
 export interface JSONObject {
-	[key: string]: JSONValue|undefined;
+	[key: string]: JSONValue | undefined;
 }
 
 /**
  * Any JSON array.
  */
-export interface JSONArray extends Array<JSONValue> {}
+export type JSONArray = Array<JSONValue>
 
 /**
  * Any non-object, non-array JSON value.
  */
-export type JSONPrimitive = string|number|boolean|null
+export type JSONPrimitive = string | number | boolean | null

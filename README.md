@@ -10,7 +10,7 @@ $ npm install @chharvey/requirejson
 
 ## Asynchronously
 ```js
-const { requireJSON } = require('@chharvey/requirejson')
+const {requireJSON} = require('@chharvey/requirejson')
 
 requireJSON('./my-file.jsonld').then((my_json_object) => {
 	console.log(my_json_object['@type'])
@@ -19,9 +19,9 @@ requireJSON('./my-file.jsonld').then((my_json_object) => {
 
 ## Synchronously
 ```js
-const { requireJSONSync } = require('@chharvey/requirejson')
+const {requireJSONSync} = require('@chharvey/requirejson')
 
-let my_json_object = requireJSONSync('./my-file.jsonld')
+const my_json_object = requireJSONSync('./my-file.jsonld')
 console.log(my_json_object['@type'])
 ```
 
@@ -34,14 +34,14 @@ import {
 	JSONObject,
 	JSONArray,
 	JSONPrimitive,
-	JSONSchema,       // WARNING{DEPRECATED} - use `@types/json-schema` instead
-	JSONSchemaObject, // WARNING{DEPRECATED} - use `@types/json-schema` instead
+	JSONSchema,       // WARNING: DEPRECATED - use `@types/json-schema` instead
+	JSONSchemaObject, // WARNING: DEPRECATED - use `@types/json-schema` instead
 	JSONLDDocument,
 	JSONLDObject,
 } from '@chharvey/requirejson'
 
-let my_json_object: Promise<JSONValue> = requireJSON('./my-file.jsonld')
-let my_json_object_sync: JSONValue = requireJSONSync('./my-file.jsonld')
+const my_json_object: Promise<JSONValue> = requireJSON('./my-file.jsonld')
+const my_json_object_sync: JSONValue = requireJSONSync('./my-file.jsonld')
 ```
 
 ## Functions

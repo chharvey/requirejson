@@ -1,4 +1,4 @@
-import { JSONValue } from './json.d'
+import type {JSONValue} from './json.d'
 
 
 /**
@@ -17,8 +17,8 @@ export declare function requireJSON(filepath: string): Promise<JSONValue>;
 export declare function requireJSONSync(filepath: string): JSONValue;
 
 
-export { JSONValue, JSONObject, JSONArray, JSONPrimitive } from './json.d'
-export { JSONLDDocument, JSONLDObject } from './json-ld.d'
+export {JSONValue, JSONObject, JSONArray, JSONPrimitive} from './json.d'
+export {JSONLDDocument, JSONLDObject} from './json-ld.d'
 export {
 	JSONSchema,
 	JSONSchemaObject,
