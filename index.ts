@@ -6,7 +6,7 @@ import type {JSONValue} from './json.d'
  * @param   filepath the path of the file to read, relative to cwd
  * @returns a JSON value that is the result of parsing the file contents
  */
-export declare const requireJSON: (filepath: string) => Promise<JSONValue>;
+export declare function requireJSON(filepath: string): Promise<JSONValue>;
 
 
 /**
@@ -14,11 +14,11 @@ export declare const requireJSON: (filepath: string) => Promise<JSONValue>;
  * @param   filepath the path of the file to read, relative to cwd
  * @returns a JSON value that is the result of parsing the file contents
  */
-export declare const requireJSONSync: (filepath: string) => JSONValue;
+export declare function requireJSONSync(filepath: string): JSONValue;
 
 
-export { JSONValue, JSONObject, JSONArray, JSONPrimitive } from './json.d'
-export { JSONLDDocument, JSONLDObject } from './json-ld.d'
+export {JSONValue, JSONObject, JSONArray, JSONPrimitive} from './json.d'
+export {JSONLDDocument, JSONLDObject} from './json-ld.d'
 export {
 	JSONSchema,
 	JSONSchemaObject,
