@@ -26,6 +26,6 @@
     "@types/jsonld": "^1.5.2"
   },
   "peerDependencies": {
-    "typescript": "^3.8.0 || ~4.0.0"
+    "typescript": "3.8.0 - 4.1.*"
   }
 }
