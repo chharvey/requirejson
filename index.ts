@@ -1,4 +1,4 @@
-import type {JSONValue} from './json.d'
+import type {JSONValue} from './json.d';
 
 
 /**
