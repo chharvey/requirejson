@@ -34,10 +34,6 @@ import {
 	JSONObject,
 	JSONArray,
 	JSONPrimitive,
-	JSONSchema,       // WARNING: DEPRECATED - use `@types/json-schema` instead
-	JSONSchemaObject, // WARNING: DEPRECATED - use `@types/json-schema` instead
-	JSONLDDocument,   // WARNING: DEPRECATED - use `@types/ld` instead
-	JSONLDObject,     // WARNING: DEPRECATED - use `@types/ld` instead
 } from '@chharvey/requirejson';
 
 const my_json_object: Promise<JSONValue> = requireJSON('./my-file.jsonld');
@@ -71,7 +67,3 @@ JSONValue | `JSONObject or JSONArray or JSONPrimitive` | Any valid [JSON](http:/
 JSONObject | `{[key: string]?: JSONValue}` | A general JSON object, with string keys and JSONValue values.
 JSONArray | `JSONValue[]` | A JSON array, with JSONValue entries.
 JSONPrimitive | `string or number or boolean or null` | A JSON primitive.
-JSONSchema (DEPRECATED) | `JSONSchema7Definition` | alias of [`JSONSchema7Definition`](https://www.npmjs.com/package/@types/json-schema) — [JSON-Schema](http://json-schema.org/).
-JSONSchemaObject (DEPRECATED) | `JSONSchema7` | alias of [`JSONSchema7`](https://www.npmjs.com/package/@types/json-schema).
-JSONLDDocument (DEPRECATED) | `extends JSONLDObject` | **Deprecated!** Use `JsonLdDocument` from [@types/jsonld](https://www.npmjs.com/package/@types/jsonld) instead.<br/>An entire JSON-LD document that validates against the [JSON-LD specification](https://json-ld.org/) — includes optional `@context` and `@graph` properties.
-JSONLDObject (DEPRECATED) | `extends JSONObject` | **Deprecated!** Use `NodeObject` from [@types/jsonld](https://www.npmjs.com/package/@types/jsonld) instead.<br/>A single object within a JSON-LD document.

@@ -1,6 +1,6 @@
 {
   "name": "@chharvey/requirejson",
-  "version": "1.2.1",
+  "version": "2.0.0",
   "description": "Require JSON files with a file extension other than `.json`.",
   "main": "index.js",
   "scripts": {
@@ -21,11 +21,5 @@
     "url": "https://github.com/chharvey/requirejson/issues"
   },
   "homepage": "https://github.com/chharvey/requirejson#readme",
-  "dependencies": {
-    "@types/json-schema": "^7.0.2",
-    "@types/jsonld": "^1.5.2"
-  },
-  "peerDependencies": {
-    "typescript": "3.8.0 - 4.1.*"
-  }
+  "dependencies": {}
 }
