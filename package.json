@@ -21,11 +21,5 @@
     "url": "https://github.com/chharvey/requirejson/issues"
   },
   "homepage": "https://github.com/chharvey/requirejson#readme",
-  "dependencies": {
-    "@types/json-schema": "^7.0.2",
-    "@types/jsonld": "^1.5.2"
-  },
-  "peerDependencies": {
-    "typescript": "3.8.0 - 4.1.*"
-  }
+  "dependencies": {}
 }
