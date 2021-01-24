@@ -1,8 +1,13 @@
+// WARNING - this file is deprecated. you should import from `@types/jsonld` directly.
+
+
+
 import type {JSONObject, JSONPrimitive} from './json.d'
 
 
 /**
  * A single JSON-LD document.
+ * @deprecated WARNING - this is outdated. you should import `JsonLdDocument` from `@types/jsonld` directly.
  * @see https://github.com/json-ld/json-ld.org/blob/1.0/schemas/jsonld-schema.json
  */
 export interface JSONLDDocument extends JSONLDObject {
@@ -13,6 +18,9 @@ export interface JSONLDDocument extends JSONLDObject {
 	[key: string]: (JSONLDObject | JSONPrimitive)[] | JSONLDObject | JSONPrimitive | undefined;
 }
 
+/**
+ * @deprecated WARNING - this is outdated. you should import `NodeObject` from `@types/jsonld` directly.
+ */
 export interface JSONLDObject extends JSONObject {
 	/**
 	 * @format uri
