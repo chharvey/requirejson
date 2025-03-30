@@ -1,6 +1,33 @@
 # requirejson
 Require JSON files with a file extension other than `.json`.
 
+# Warning: Deprecated!
+**This package is now deprecated.**
+Use native ES module imports with [import attributes (`with`)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import/with) instead.
+Double-check engine support before switching.
+```js
+import my_json_object from './my-file.jsonld' with {type: 'json'};
+
+console.log(my_json_object['@type']);
+```
+
+In TypeScript, you may wish to explicitly declare the type of this imported object as a new constant,
+since its type is not inferred.
+```ts
+import my_json_object from './my-file.jsonld' with {type: 'json'};
+
+const my_json_object_typed: MyJsonLdType = my_json_object;
+
+console.log(my_json_object_typed['@type']);
+//                              ^ no type error if the shape of `MyJsonLdType` is correct
+```
+
+**Note:** Though this package is deprecated, you may still install it to import and use [the attached JSON types](#types).
+Just be aware that this package is no longer maintained, so you should look for an alternate solution.
+```ts
+import type {JSONValue, JSONObject, JSONArray, JSONPrimitive} from '@chharvey/requirejson';
+```
+
 # Install
 ```
 $ npm install @chharvey/requirejson
